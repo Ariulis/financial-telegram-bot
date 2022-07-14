@@ -8,6 +8,7 @@ authors = ["Ariulis <andrey59995@gmail.com>"]
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
+autopep8 = "^1.6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

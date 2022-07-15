@@ -11,8 +11,6 @@ COPY ./pyproject.toml ./poetry.lock* ./
 
 RUN poetry install --no-root && apt update && apt install sqlite3
 
-COPY *.py ./
-
-COPY createdb.sql ./
+COPY *.py createdb.sql .env ./
 
 ENTRYPOINT [ "python", "server.py" ]

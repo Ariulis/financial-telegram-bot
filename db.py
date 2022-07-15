@@ -1,6 +1,10 @@
+import os
 from typing import Dict, List, Tuple
 
 import sqlite3
+
+if not os.path.exists('db'):
+    os.mkdir('db')
 
 conn = sqlite3.connect('db/finance.db')
 cursor = conn.cursor()
@@ -49,7 +53,7 @@ def _init_db():
         sql = f.read()
 
     cursor.executescript(sql)
-    conn.commit
+    conn.commit()
 
 
 def check_db_exists():
@@ -63,3 +67,5 @@ def check_db_exists():
         return
 
     _init_db()
+
+check_db_exists()

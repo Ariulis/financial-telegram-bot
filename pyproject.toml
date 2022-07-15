@@ -7,6 +7,7 @@ authors = ["Ariulis <andrey59995@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 aiogram = "^2.21"
+python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.6.0"

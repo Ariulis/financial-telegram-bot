@@ -1,11 +1,16 @@
 import os
 
 from aiogram import Bot, Dispatcher, executor, types
+from dotenv import load_dotenv
 
 import exceptions
 import expenses
 from categories import Categories
 from middlewares import AccessMiddleware
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
 
 API_TOKEN = os.getenv('TELEGRAM_API_TOKEN')
 ACCESS_ID = os.getenv('TELEGRAM_ACCESS_ID')
